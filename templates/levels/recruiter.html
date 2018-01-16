@@ -1,0 +1,29 @@
+{% extends 'wrapper.html' %}
+
+{% block container %}
+    <div class="jumbotron mt-5">
+        <div class="container">
+            <h1 class="display-4">Recruiter</h1>
+            <p class="lead">
+                You've asked acquaintance who is a recruiter, to help you to find a better job.
+                Recruiter has found one vacancy at company she work for, but with a little bit different technologies stack and with good salary,
+                also she has found three vacancies in another companies, which may be interesting for you. <br>
+                Help {{ name }} to make a choice!
+            </p>
+        </div>
+    </div>
+    <div class="row" id="buttons">
+        <div class="col">
+            <a href="{% url 'make_research' %}" class="btn btn-warning btn-block btn-lg">Try to find by your own</a>
+        </div>
+        <div class="col">
+            <a href="" class="btn btn-warning btn-block btn-lg" id="frontend">Frontend project; high salary</a>
+        </div>
+        <div class="col">
+            <a href="{% url 'response_from_companies' %}" class="btn btn-warning btn-block btn-lg">send CV to companies</a>
+        </div>
+        <div class="col">
+            <button class="btn btn-secondary btn-block btn-lg" id="coffee">Drink some coffee</button>
+        </div>
+    </div>
+{% endblock %}

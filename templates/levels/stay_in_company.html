@@ -1,0 +1,37 @@
+{% extends 'wrapper.html' %}
+
+{% block container %}
+    <div class="jumbotron mt-5">
+        <div class="container">
+            <h1 class="display-4">Get another project</h1>
+            <p class="lead">
+                Having explained and discussed the whole situation with the leadership, {{ name }}
+                found out that there were no new interesting vacancies for him,
+                but he was assured that something should appear soon and he would really enjoy this new project.
+                <br>
+                Also, if he would like, he can switch to another project right now and start working like a QA.
+                This may be a good opportunity to improve the skills.
+            </p>
+        </div>
+    </div>
+    <div class="row" id="buttons">
+        <div class="col">
+            <a href="" class="btn btn-warning btn-block btn-lg" id="frontend">QA project</a>
+        </div>
+        <div class="col">
+            <button class="btn btn-warning btn-block btn-lg" id="wait">Wait</button>
+            <p class="mt-3 text-center">
+                <span class="text-muted">you don't know how much you will have to wait</span>
+            </p>
+        </div>
+        <div class="col">
+            <a href="{% url 'make_research' %}" class="btn btn-warning btn-block btn-lg">retire from work</a>
+            <p class="mt-3 text-center">
+                <span class="text-muted">and try to find by your own</span>
+            </p>
+        </div>
+        <div class="col">
+            <button class="btn btn-secondary btn-block btn-lg" id="coffee">Drink some coffee</button>
+        </div>
+    </div>
+{% endblock %}

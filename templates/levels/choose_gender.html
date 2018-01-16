@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h1 class="text-center mt-5">Choose the sex of your character!</h1>
+    <form action="" method="post" id="gender_form">
+        {% csrf_token %}
+        <div class="row mt-5 radios">
+            <div class="col-2 offset-4">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio1" value="0" name="gender" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio1"><i class="fa fa-male" aria-hidden="true"></i> Male</label>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio2" value="1" name="gender" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio2"><i class="fa fa-female" aria-hidden="true"></i> Female</label>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <button class="btn btn-success" style="color: white" id="gender_selected">Go</button>
+        </div>
+    </form>
+{% endblock %}

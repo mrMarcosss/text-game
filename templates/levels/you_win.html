@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="jumbotron mt-5">
+        <div class="container">
+            <h1 class="display-4 text-center">
+                {% if status != 'not so bad' %} You{% endif %} {{ status }}!
+            </h1>
+            <p class="lead text-center">
+                {% if status == 'win' %}
+                    Congratulations!!! {{ name }} has a perfect job! {{ name }} got back on track.
+                {% elif status == 'not so bad' %}
+                    {{ name }} has earned enough money to pay off all the loans.
+                    But {{ name }} did not receive full satisfaction from work in this company
+                {% elif status == 'send-cv' %}
+                    {{ name }}'s CV is slightly outdated. The last time {% if name == 'Roberto' %}he{% else %}she{% endif %} changed it was 45 years ago.
+                    <br>
+                    No one of the companies didn't invite {{ name }} to the interview. <br>
+                    Try again.
+                {% else %}
+                    hmmm.... It seems a good social package was not a big deal for {{ name }}.
+                    A couple of months after, {{ name }} understood that
+                    {% if name == 'Roberto' %}he{% else %}she{% endif %} became more unhappy
+                    then {% if name == 'Roberto' %}he{% else %}she{% endif %} was before. This job is not interesting for {% if name == 'Roberto' %}him{% else %}her{% endif %} at all.
+                    Try again ;)
+                {% endif %}
+           </p>
+        </div>
+    </div>
+    <div class="text-center text-center">
+        <a href="/" class="btn btn-success btn-lg">Restart :)</a>
+    </div>
+{% endblock %}

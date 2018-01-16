@@ -1,0 +1,28 @@
+{% extends 'wrapper.html' %}
+
+{% block container %}
+    <div class="jumbotron mt-5">
+        <div class="container">
+            <h1 class="display-4">You've found several vacancies</h1>
+            <p class="lead">
+                You have spent a week in looking for new opportunities and you have found several
+                hot vacancies which may interest you <br>
+                There are not a lot of vacancies, but you can always wait for new ones
+            </p>
+        </div>
+    </div>
+    <div class="row" id="buttons">
+        <div class="col">
+            <a href="" class="btn btn-warning btn-block btn-lg" id="send_cv">Send a CV</a>
+        </div>
+        <div class="col">
+            <a href="{% url 'response_from_companies' %}" class="btn btn-warning btn-block btn-lg">Edit CV and send</a>
+        </div>
+        <div class="col">
+            <button class="btn btn-warning btn-block btn-lg" id="wait">Wait for another vacancies</button>
+        </div>
+        <div class="col">
+            <button class="btn btn-secondary btn-block btn-lg" id="coffee">Drink some coffee</button>
+        </div>
+    </div>
+{% endblock %}

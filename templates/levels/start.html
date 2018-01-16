@@ -1,0 +1,36 @@
+{% extends 'wrapper.html' %}
+
+{% block container %}
+    <div class="jumbotron mt-5">
+        <div class="container">
+            <h1 class="display-4">This is just the beginning!</h1>
+            <p class="lead">
+                {{ name }} has been working in a company for 45 years,
+                15 years of which - on one project. {{ name }} got a job right after graduating from university.
+                However, recently, {{ name }} has began to feel light tiredness and slight stress. <br>
+                {{ name }} began to reflect on the routine of his work, and therefore,
+                {% if name == 'Roberto' %}he{% else %}she{% endif %} had a desire to make changes in {% if name == 'Roberto' %}his{% else %}her{% endif %} life.
+                <br>
+                Thinking about it for a long time, {{ name }} hesitates what decision will be the best,
+                help {% if name == 'Roberto' %}him{% else %}her{% endif %} with this.
+                <br>
+                <p class="text-muted mb-0">The goal of the game: to find a perfect job!</p> <br>
+                <p class="text-muted mb-0">P.S. if you don't know what way you should choose - drink coffee</p>
+            </p>
+        </div>
+    </div>
+    <div class="row" id="buttons">
+        <div class="col">
+            <a href="{% url 'recruiter' %}" class="btn btn-warning">Talk with acquaintance recruiter</a>
+        </div>
+        <div class="col">
+            <a href="{% url 'stay_in_company' %}" class="btn btn-warning">Try to get another project on current job</a>
+        </div>
+        <div class="col">
+            <a href="{% url 'make_research' %}" class="btn btn-warning btn-block">Make a research</a>
+        </div>
+        <div class="col">
+            <button class="btn btn-secondary btn-block" id="coffee">Drink some coffee</button>
+        </div>
+    </div>
+{% endblock %}

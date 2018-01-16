@@ -1,0 +1,41 @@
+{% extends 'wrapper.html' %}
+
+{% block container %}
+    <div class="jumbotron mt-5">
+        <div class="container">
+            <h1 class="display-4">You received invitation to an interview from 3 companies</h1>
+            <p class="lead">
+                {{ name }} has received an invite to the interview from three companies.
+                But it turned out, that all three interviews are scheduled at the same time.
+                {{ name }} has the opportunity to visit only one company. <br>
+                Please, choose a company that is perfect for {{ name }}.
+            </p>
+        </div>
+    </div>
+    <div class="row companies" id="buttons">
+        <div class="col">
+            <a href="" class="btn btn-warning btn-block btn-lg" data-val="1">Company 1</a>
+            <p class="mt-3">
+                <span class="text-muted">benefit:</span> The highest salary
+            </p>
+        </div>
+        <div class="col">
+            <a href="" class="btn btn-warning btn-block btn-lg" data-val="2">Company 2</a>
+            <p class="mt-3">
+                <span class="text-muted">benefit:</span> Interesting project
+            </p>
+        </div>
+        <div class="col">
+            <a href="" class="btn btn-warning btn-block btn-lg" data-val="3">Company 3</a>
+            <p class="mt-3">
+                <span class="text-muted">benefit:</span> The best social package
+            </p>
+        </div>
+        <div class="col">
+            <button class="btn btn-secondary btn-block btn-lg" id="coffee">Drink some coffee</button>
+            <p class="mt-3 text-center">
+                <span class="text-muted">just drink coffee</span>
+            </p>
+        </div>
+    </div>
+{% endblock %}

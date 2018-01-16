@@ -1,0 +1,6 @@
+.start-button {
+    position: absolute;
+    top: 50%;
+    width: 200px;
+    margin-left: -100px
+}
